@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.pack/
+*.log
+.DS_Store
+coverage/
+harness-report.json
+.env
+.env.local

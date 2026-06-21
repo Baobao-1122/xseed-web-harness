@@ -40,6 +40,17 @@
     "web"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baobao-1122/xseed-web-harness.git"
+  },
+  "homepage": "https://github.com/Baobao-1122/xseed-web-harness#readme",
+  "bugs": {
+    "url": "https://github.com/Baobao-1122/xseed-web-harness/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=20"
   },

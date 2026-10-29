@@ -1,4 +1,4 @@
-# @xseed/web-harness — 设计说明
+# @linzhang1122/web-harness — 设计说明
 
 > 独立仓库，供多个 Web 管理系统（Next.js + Vitest）复用。  
 > **不**替代 Vitest；**不**包含具体业务（CEC102、RBAC 等）。
@@ -7,7 +7,7 @@
 
 | 项 | 结论 |
 |----|------|
-| 包名 | `@xseed/web-harness` |
+| 包名 | `@linzhang1122/web-harness` |
 | 仓库 | 独立 `xseed-web-harness`，与 `saa-s-ui` 分离 |
 | 核心职责 | CLI 编排：config → layers → steps → 报告 |
 | 断言 | Vitest 负责通用 `expect`；本包 `/testing` 仅提供跨项目语义助手（0.2 扩展） |
@@ -21,7 +21,7 @@
   lib/**/*.test.ts      ← Vitest 用例（业务断言在此）
         │
         ▼
-@xseed/web-harness
+@linzhang1122/web-harness
   harness run           ← 读 config，按 layer 顺序执行
   harness doctor        ← 检查 node / pnpm / vitest / config
   harness init          ← 生成 config 模板
@@ -45,7 +45,7 @@
 ```json
 {
   "devDependencies": {
-    "@xseed/web-harness": "file:../xseed-web-harness"
+    "@linzhang1122/web-harness": "file:../xseed-web-harness"
   },
   "scripts": {
     "test:harness": "harness run",

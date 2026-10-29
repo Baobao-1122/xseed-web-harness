@@ -1,4 +1,4 @@
-# @xseed/web-harness
+# @linzhang1122/web-harness
 
 可复用的 **Web 项目测试 harness**：用配置文件描述分层质量门禁，CLI 统一编排 Vitest、Shell 与环境矩阵（如 `USE_MOCK=true/false`）。
 
@@ -6,7 +6,13 @@
 
 ## 安装
 
-### 方式 A：本地联调（推荐，未发布 npm 时）
+### 方式 A：npm（推荐）
+
+```bash
+pnpm add -D @linzhang1122/web-harness
+```
+
+### 方式 B：本地联调（改 harness 源码时）
 
 两个仓库平级放置：
 
@@ -21,14 +27,14 @@ Formal work/
 ```json
 {
   "devDependencies": {
-    "@xseed/web-harness": "file:../xseed-web-harness"
+    "@linzhang1122/web-harness": "file:../xseed-web-harness"
   }
 }
 ```
 
 然后 `pnpm install`（会自动执行 harness 的 `prepare` → `pnpm build`）。
 
-### 方式 B：npm tarball
+### 方式 C：npm tarball
 
 在 harness 仓库打包：
 
@@ -43,10 +49,19 @@ pnpm pack:check    # 测试 + 构建 + 生成 .pack/*.tgz
 pnpm add -D /path/to/xseed-web-harness/.pack/xseed-web-harness-0.2.0.tgz
 ```
 
-### 方式 C：npm 私服（发布后）
+### 方式 D：npm 私服（已发布至 npmjs.org）
 
 ```bash
-pnpm add -D @xseed/web-harness
+pnpm add -D @linzhang1122/web-harness
+```
+
+## 发布到 npm
+
+本机默认 registry 若为 npmmirror，**发布须指向 npmjs.org**（已在 `publishConfig.registry` 配置）：
+
+```bash
+npm login --registry=https://registry.npmjs.org
+npm publish --access public
 ```
 
 ## 快速开始
@@ -61,7 +76,7 @@ harness run --profile ci
 ## harness.config.ts
 
 ```typescript
-import { defineHarnessConfig } from "@xseed/web-harness"
+import { defineHarnessConfig } from "@linzhang1122/web-harness"
 
 export default defineHarnessConfig({
   name: "my-web-app",
@@ -109,7 +124,7 @@ export default defineHarnessConfig({
 | `shell` | 执行任意命令（lint、CEC102 脚本等） |
 | `matrix` | 对 `envKey` 取多个 `values`，嵌套执行子 steps |
 
-## @xseed/web-harness/testing
+## @linzhang1122/web-harness/testing
 
 Vitest **伴侣**助手（不替代 `expect`）：
 
@@ -119,7 +134,7 @@ import {
   assertResponseForbidden,
   assertAdapterParity,
   runWithEnv,
-} from "@xseed/web-harness/testing"
+} from "@linzhang1122/web-harness/testing"
 
 // 路由权限测试（number 或 Response）
 assertApiForbidden(res.status)

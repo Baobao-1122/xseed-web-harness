@@ -1,4 +1,4 @@
-import { defineHarnessConfig } from "@xseed/web-harness"
+import { defineHarnessConfig } from "@linzhang1122/web-harness"
 
 export default defineHarnessConfig({
   name: "my-web-app",

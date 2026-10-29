@@ -12,7 +12,7 @@ async function main(): Promise<void> {
 
   program
     .name("harness")
-    .description("@xseed/web-harness — Web 项目分层测试编排 CLI")
+    .description("@linzhang1122/web-harness — Web 项目分层测试编排 CLI")
     .version(readPackageVersion())
 
   program

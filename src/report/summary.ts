@@ -55,7 +55,7 @@ export function finalizeReport(report: HarnessReport, startedAt: Date): HarnessR
 
 export function printReportSummary(report: HarnessReport): void {
   const icon = report.success ? "✅" : "❌"
-  console.log(`\n${icon} @xseed/web-harness — ${report.project}`)
+  console.log(`\n${icon} @linzhang1122/web-harness — ${report.project}`)
   if (report.profile) console.log(`   profile: ${report.profile}`)
   console.log(`   耗时: ${(report.durationMs / 1000).toFixed(1)}s\n`)
 

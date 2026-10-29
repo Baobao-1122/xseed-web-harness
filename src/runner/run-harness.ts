@@ -120,7 +120,7 @@ export async function doctorHarness(cwd: string): Promise<void> {
   checks.push(checkCommand("pnpm", ["--version"]))
   checks.push(checkCommand("pnpm", ["vitest", "--version"]))
 
-  console.log("\n@xseed/web-harness doctor\n")
+  console.log("\n@linzhang1122/web-harness doctor\n")
   for (const item of checks) {
     const icon = item.ok ? "✓" : "✗"
     const hint = item.hint ? ` — ${item.hint}` : ""
@@ -149,7 +149,7 @@ function checkCommand(command: string, args: string[]): { name: string; ok: bool
 
 export function initHarnessConfig(cwd: string): string {
   const target = resolve(cwd, "harness.config.ts")
-  const template = `import { defineHarnessConfig } from "@xseed/web-harness"
+  const template = `import { defineHarnessConfig } from "@linzhang1122/web-harness"
 
 export default defineHarnessConfig({
   name: "my-web-app",

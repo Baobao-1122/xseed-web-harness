@@ -1,5 +1,5 @@
 /**
- * @xseed/web-harness/testing — Vitest 伴侣助手
+ * @linzhang1122/web-harness/testing — Vitest 伴侣助手
  *
  * 不替代 Vitest expect；提供跨 Web 项目可复用的语义化断言与环境工具。
  */

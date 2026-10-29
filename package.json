@@ -1,6 +1,6 @@
 {
   "name": "@linzhang1122/web-harness",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "可复用的 Web 项目测试 harness：分层编排 Vitest / Shell / 环境矩阵，统一质量门禁",
   "type": "module",
   "main": "./dist/index.js",
